@@ -1,0 +1,17 @@
+{
+  "name": "translator",
+  "scripts": {
+    "build": "lerna run build --stream",
+    "start": "concurrently --kill-others-on-fail \"cd packages/server; npm run start\" \"cd packages/client; npm run start\"",
+    "serve": "cd packages/server; cross-env PORT=${PORT:-8080} npm run serve"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "lerna": "^3.8.0"
+  }
+}
