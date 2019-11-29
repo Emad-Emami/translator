@@ -1,8 +1,8 @@
 {
-  "name": "translator",
+  "name": "root",
   "scripts": {
     "build": "lerna run build --stream",
-    "start": "concurrently --kill-others-on-fail \"cd packages/server; npm run start\" \"cd packages/client; npm run start\"",
+    "start": "concurrently --kill-others-on-fail \"cd packages/server; npm run start\"",
     "serve": "cd packages/server; cross-env PORT=${PORT:-8080} npm run serve"
   },
   "private": true,
