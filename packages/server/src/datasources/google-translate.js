@@ -1,7 +1,7 @@
 import RESTDataSource from 'apollo-datasource-rest';
 
 const GOOGLE_API_VERSION = 3;
-const GOOGLE_PROJECT_NUMBER = '671490363164';
+const GOOGLE_PROJECT_NUMBER = '239462248723';
 
 class GoogleTranslate extends RESTDataSource {
   constructor() {
