@@ -1,5 +1,4 @@
 /.vscode
 /.cache
 .tmp
-node_module
-node_modules/
+/node_modules
