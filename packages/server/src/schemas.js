@@ -1,8 +1,9 @@
-import termSchema from './modules/Terms/schema';
-import userSchema from './modules/Users/schema';
+import creatureSchema from './modules/Creatures/schema';
+import generationSchema from './modules/Generations/schema';
+import habitatSchema from './modules/Habitats/schema';
 import { gql } from 'apollo-server';
 
-const linkSchema = gql`
+const applicationSchema = gql`
   type Query {
     _: Boolean
   }
@@ -11,4 +12,4 @@ const linkSchema = gql`
   }
 `;
 
-export default [linkSchema, userSchema, termSchema];
+export default [applicationSchema, creatureSchema, generationSchema, habitatSchema];

@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "game-of-life",
   "scripts": {
     "build": "lerna run build --stream",
     "start": "concurrently --kill-others-on-fail \"cd packages/server; npm run start\"",

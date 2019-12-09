@@ -1,4 +1,5 @@
-import userResolver from './modules/Users/resolvers';
-import termResolver from './modules/Terms/resolvers';
+import creatureResolver from './modules/Creatures/resolvers';
+import generationResolver from './modules/Generations/resolvers';
+import habitatResolver from './modules/Habitats/resolvers';
 
-export default [userResolver, termResolver];
+export default [creatureResolver, generationResolver, habitatResolver];
