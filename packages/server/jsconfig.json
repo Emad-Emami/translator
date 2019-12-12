@@ -1,1 +1,11 @@
-{ "compilerOptions": { "target": "esnext", "module": "commonjs" } }
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "checkJs": true,
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "baseUrl": "./"
+  },
+  "exclude": ["node_modules", "dist"]
+}

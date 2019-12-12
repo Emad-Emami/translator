@@ -13,10 +13,12 @@ const creatureSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  generations: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'generation',
-  }],
+  generations: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'generation',
+    },
+  ],
 });
 
 const creature = mongoose.model('creature', creatureSchema);

@@ -27,9 +27,16 @@
     "@babel/preset-env": "^7.7.4",
     "apollo-link": "^1.2.3",
     "apollo-link-http": "^1.5.5",
+    "babel-eslint": "^10.0.3",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-standard": "^4.0.1",
     "jest": "^23.6.0",
     "node-fetch": "^2.2.1",
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "prettier": "^1.19.1"
   },
   "jest": {
     "testPathIgnorePatterns": [

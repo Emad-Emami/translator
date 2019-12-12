@@ -10,13 +10,23 @@ export default {
     },
   },
   Mutation: {
-    createCreature: async (parent, { name, width, height }, { models: { creatureModel } }, info) => {
+    createCreature: async (
+      parent,
+      { name, width, height },
+      { models: { creatureModel } },
+      info,
+    ) => {
       const creature = await creatureModel.create({ name, width, height });
       return creature;
     },
   },
   Creature: {
-    generations: async ({ id }, args, { models: { generationModel } }, info) => {
+    generations: async (
+      { id },
+      args,
+      { models: { generationModel } },
+      info,
+    ) => {
       const generations = await generationModel.find({ creature: id }).exec();
       return generations;
     },

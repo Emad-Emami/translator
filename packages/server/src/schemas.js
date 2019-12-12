@@ -12,4 +12,9 @@ const applicationSchema = gql`
   }
 `;
 
-export default [applicationSchema, creatureSchema, generationSchema, habitatSchema];
+export default [
+  applicationSchema,
+  creatureSchema,
+  generationSchema,
+  habitatSchema,
+];
