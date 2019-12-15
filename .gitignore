@@ -2,3 +2,5 @@
 /.cache
 .tmp
 /node_modules
+*lerna-debug.log
+*.DS_Store

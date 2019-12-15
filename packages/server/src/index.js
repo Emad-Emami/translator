@@ -4,7 +4,6 @@ import mongoose from 'mongoose';
 import { ApolloServer } from 'apollo-server-express';
 import schemas from './schemas';
 import resolvers from './resolvers';
-
 import creatureModel from './modules/Creatures/model';
 import generationModel from './modules/Generations/model';
 import habitatModel from './modules/Habitats/model';
