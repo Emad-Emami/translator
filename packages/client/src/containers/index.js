@@ -1,4 +1,3 @@
-export { default as ActionButton } from './action-button';
-export { default as BookTrips } from './book-trips';
-export { default as CartItem } from './cart-item';
-export { default as LogoutButton } from './logout-button';
+export { default as Creatures } from './Creatures';
+export { default as Generations } from './Generations';
+export { default as Habitats } from './Habitats';
