@@ -1,3 +1,1 @@
-# Apollo Fullstack Tutorial
-
-## Client
+# Game of life client
