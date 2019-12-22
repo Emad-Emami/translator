@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Habitats() {
-  return <div />;
+  return <div>Habitats</div>;
 }
