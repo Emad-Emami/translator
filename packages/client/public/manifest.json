@@ -1,6 +1,6 @@
 {
-  "short_name": "Launches",
-  "name": "Launches",
+  "short_name": "GOL",
+  "name": "Game of life",
   "icons": [
     {
       "src": "favicon.ico",
