@@ -1,0 +1,50 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "jsx": true,
+    "ecmaVersion": 9,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "extends": ["airbnb", "airbnb/hooks", "prettier", "prettier/react"],
+  "plugins": ["react", "react-hooks", "prettier", "import"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", "jsx"]
+      }
+    ],
+    "react/require-default-props": [
+      0,
+      {
+        "forbidDefaultForRequired": false
+      }
+    ],
+    "max-len": [
+      1,
+      80,
+      2,
+      {
+        "ignorePattern": "(^import\\s.+\\sfrom\\s.+;$)|(^<path\\s.+$)",
+        "ignoreUrls": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreStrings": true
+      }
+    ]
+  }
+}

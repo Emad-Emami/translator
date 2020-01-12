@@ -10,6 +10,8 @@
     "clean": "lerna clean --yes"
   },
   "devDependencies": {
+    "add": "^2.0.6",
+    "eslint-plugin-import": "^2.20.0",
     "lerna": "^3.19.0"
   },
   "dependencies": {}

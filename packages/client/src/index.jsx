@@ -31,3 +31,5 @@ ReactDOM.render(
   </ApolloProvider>,
   document.getElementById('root'),
 );
+
+module.hot.accept();
