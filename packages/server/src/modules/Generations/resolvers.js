@@ -31,9 +31,9 @@ export default {
     },
   },
   Generation: {
-    habitats: async ({ id }, args, { models: { habitatModel } }, info) => {
-      const habitats = await habitatModel.find({ generation: id }).exec();
-      return habitats;
+    genes: async ({ id }, args, { models: { geneModel } }, info) => {
+      const genes = await geneModel.find({ generation: id }).exec();
+      return genes;
     },
     creature: async (
       { creature: creatureId },

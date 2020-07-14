@@ -6,7 +6,7 @@ import schemas from './schemas';
 import resolvers from './resolvers';
 import creatureModel from './modules/Creatures/model';
 import generationModel from './modules/Generations/model';
-import habitatModel from './modules/Habitats/model';
+import geneModel from './modules/Genes/model';
 
 const app = express();
 app.use(cors());
@@ -20,7 +20,7 @@ const server = new ApolloServer({
         models: {
           creatureModel,
           generationModel,
-          habitatModel,
+          geneModel,
         },
       };
     }

@@ -5,10 +5,10 @@ const generationSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  habitats: [
+  genes: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'habitat',
+      ref: 'gene',
     },
   ],
   creature: {

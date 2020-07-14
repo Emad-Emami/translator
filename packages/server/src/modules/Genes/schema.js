@@ -1,7 +1,7 @@
 import { gql } from 'apollo-server';
 
 export default gql`
-  type Habitat {
+  type Gene {
     id: ID!
     x: Int!
     y: Int!
@@ -9,11 +9,11 @@ export default gql`
   }
 
   extend type Query {
-    habitat(id: ID!): Habitat!
-    habitats(generation: ID!): [Habitat!]!
+    gene(id: ID!): Gene!
+    genes(generation: ID!): [Gene!]!
   }
 
   extend type Mutation {
-    createHabitat(generation: ID!, x: Int!, y: Int!): Habitat!
+    createGene(generation: ID!, x: Int!, y: Int!): Gene!
   }
 `;

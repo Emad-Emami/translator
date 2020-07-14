@@ -1,6 +1,6 @@
 import creatureSchema from './modules/Creatures/schema';
 import generationSchema from './modules/Generations/schema';
-import habitatSchema from './modules/Habitats/schema';
+import geneSchema from './modules/Genes/schema';
 import { gql } from 'apollo-server';
 
 const applicationSchema = gql`
@@ -16,5 +16,5 @@ export default [
   applicationSchema,
   creatureSchema,
   generationSchema,
-  habitatSchema,
+  geneSchema,
 ];

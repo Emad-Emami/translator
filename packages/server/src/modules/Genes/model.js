@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const habitatSchema = new mongoose.Schema({
+const geneSchema = new mongoose.Schema({
   x: {
     type: Number,
     required: true,
@@ -15,6 +15,6 @@ const habitatSchema = new mongoose.Schema({
   },
 });
 
-const habitat = mongoose.model('habitat', habitatSchema);
+const gene = mongoose.model('gene', geneSchema);
 
-export default habitat;
+export default gene;

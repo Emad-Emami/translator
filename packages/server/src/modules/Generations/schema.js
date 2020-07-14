@@ -4,7 +4,7 @@ export default gql`
   type Generation {
     id: ID!
     creature: Creature!
-    habitats: [Habitat]
+    genes: [Gene]
   }
 
   extend type Query {

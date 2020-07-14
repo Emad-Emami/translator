@@ -22,9 +22,7 @@ export default function DefaultLayout({ children }) {
         <StyledNavigationList $align={ALIGN.right}>
           Generations
         </StyledNavigationList>
-        <StyledNavigationList $align={ALIGN.right}>
-          Habitats
-        </StyledNavigationList>
+        <StyledNavigationList $align={ALIGN.right}>Genes</StyledNavigationList>
       </HeaderNavigation>
       <Grid>
         <Cell>{children}</Cell>

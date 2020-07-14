@@ -25,7 +25,7 @@ cache.writeData({
   data: {
     creatures: [],
     generations: [],
-    habitats: [],
+    genes: [],
   },
 });
 

@@ -4,7 +4,7 @@ import DefaultLayout from '../components/Layouts/components/DefaultLayout';
 import GamePage from './GamePage';
 import CreaturesPage from './CreaturesPage';
 import GenerationsPage from './GenerationsPage';
-import HabitatsPage from './HabitatsPage';
+import GenesPage from './GenesPage';
 
 export default function Pages() {
   return (
@@ -13,7 +13,7 @@ export default function Pages() {
         <GamePage path="/" />
         <CreaturesPage path="/creatures" />
         <GenerationsPage path="/generations" />
-        <HabitatsPage path="/habitats" />
+        <GenesPage path="/genes" />
       </DefaultLayout>
     </Router>
   );
