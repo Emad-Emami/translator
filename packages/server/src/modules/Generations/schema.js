@@ -13,6 +13,6 @@ export default gql`
   }
 
   extend type Mutation {
-    createGeneration(creature: ID!, index: Int!): Generation!
+    createGeneration(creature: ID!): Generation!
   }
 `;

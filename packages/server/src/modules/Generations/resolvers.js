@@ -22,11 +22,11 @@ export default {
   Mutation: {
     createGeneration: async (
       parent,
-      { creature, index },
+      { creature },
       { models: { generationModel } },
       info,
     ) => {
-      const generation = await generationModel.create({ creature, index });
+      const generation = await generationModel.create({ creature });
       return generation;
     },
   },

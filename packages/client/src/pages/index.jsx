@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Router } from '@reach/router';
+import DefaultLayout from '../components/Layouts/components/DefaultLayout';
 import GamePage from './GamePage';
 import CreaturesPage from './CreaturesPage';
 import GenerationsPage from './GenerationsPage';
@@ -7,11 +8,13 @@ import HabitatsPage from './HabitatsPage';
 
 export default function Pages() {
   return (
-    <Router primary={false} component={Fragment}>
-      <GamePage path="/" />
-      <CreaturesPage path="/creatures" />
-      <GenerationsPage path="/generations" />
-      <HabitatsPage path="/habitats" />
+    <Router>
+      <DefaultLayout path="/">
+        <GamePage path="/" />
+        <CreaturesPage path="/creatures" />
+        <GenerationsPage path="/generations" />
+        <HabitatsPage path="/habitats" />
+      </DefaultLayout>
     </Router>
   );
 }

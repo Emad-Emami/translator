@@ -35,6 +35,7 @@ function webpackConfig() {
       new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
         template: 'src/index.ejs',
+        favicon: './public/favicon.ico',
       }),
     ],
     devServer: {
