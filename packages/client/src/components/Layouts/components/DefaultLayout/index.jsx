@@ -1,36 +1,42 @@
 import React from 'react';
+import withStyles from '../../../../hocs/withStyles';
 import PropTypes from 'prop-types';
-import {
-  HeaderNavigation,
-  ALIGN,
-  StyledNavigationList,
-  StyledNavigationItem,
-} from 'baseui/header-navigation';
-import { Grid, Cell } from 'baseui/layout-grid';
 
-export default function DefaultLayout({ children }) {
+const styles = theme => {
+  console.log(theme);
+  return {
+    root: {
+      display: 'flex',
+      selectors: {
+        ':global(body)': {
+          backgroundColor: theme?.semanticColors?.bodyBackground,
+        },
+      },
+    },
+  };
+};
+
+function DefaultLayout({ children, classNames, ...rest }) {
   return (
-    <>
-      <HeaderNavigation>
-        <StyledNavigationList $align={ALIGN.left}>
-          <StyledNavigationItem>Game Of Life</StyledNavigationItem>
-        </StyledNavigationList>
-        <StyledNavigationList $align={ALIGN.center} />
-        <StyledNavigationList $align={ALIGN.right}>
-          Creatures
-        </StyledNavigationList>
-        <StyledNavigationList $align={ALIGN.right}>
-          Generations
-        </StyledNavigationList>
-        <StyledNavigationList $align={ALIGN.right}>Genes</StyledNavigationList>
-      </HeaderNavigation>
-      <Grid>
-        <Cell>{children}</Cell>
-      </Grid>
-    </>
+    <div className={classNames.root}>
+      <div>
+        <div>
+          <div>Game Of Life</div>
+        </div>
+        <div />
+        <div>Creatures</div>
+        <div>Generations</div>
+        <div>Genes</div>
+      </div>
+      <div>
+        <div>{children}</div>
+      </div>
+    </div>
   );
 }
 
 DefaultLayout.propTypes = {
   children: PropTypes.node,
 };
+
+export default withStyles(DefaultLayout, styles);
