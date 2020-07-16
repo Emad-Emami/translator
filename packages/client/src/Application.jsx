@@ -18,7 +18,7 @@ export default function Application() {
         {props => (
           <DefaultLayout {...props}>
             <Switch>
-              <Route path="/" component={Games} />
+              <Route exact path="/" component={Games} />
               <Route path="/creatures" component={Creatures} />
               <Route path="/generations" component={Generations} />
               <Route path="/genes" component={Genes} />
