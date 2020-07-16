@@ -4,9 +4,8 @@ import { ApolloClient } from 'apollo-client';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
-
 // import { resolvers, typeDefs } from './resolvers';
-import Pages from './pages';
+import Application from './Application';
 
 const cache = new InMemoryCache();
 const client = new ApolloClient({
@@ -28,7 +27,7 @@ cache.writeData({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <Pages />
+    <Application />
   </ApolloProvider>,
   document.getElementById('root'),
 );

@@ -14,8 +14,8 @@ function createRandomGeneration(width = 40, height = 40) {
 }
 const cells = createRandomGeneration();
 
-function Game() {
+function Games() {
   return <GameBoardCanvas data={cells} />;
 }
 
-export default Game;
+export default Games;
