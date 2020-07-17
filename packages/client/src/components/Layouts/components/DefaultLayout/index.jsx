@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Nav } from 'office-ui-fabric-react/lib/Nav';
-import withStyles from '../../../../hocs/withStyles';
+import withStyles from '@hocs/withStyles';
 
 const styles = theme => {
   return {

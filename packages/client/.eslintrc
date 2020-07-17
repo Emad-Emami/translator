@@ -16,8 +16,11 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "moduleDirectory": ["node_modules", "src"],
+        "moduleDirectory": ["node_modules"],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "webpack": {
+        "config": "webpack.config.js"
       }
     }
   },
@@ -35,7 +38,8 @@
         "forbidDefaultForRequired": false
       }
     ],
-    "react/forbid-prop-types": [0],
+    "react/forbid-prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
     "max-len": [
       1,
       80,

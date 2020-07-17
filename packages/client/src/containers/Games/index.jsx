@@ -1,6 +1,6 @@
 import React from 'react';
 import { random } from 'lodash-es';
-import GameBoardCanvas from 'components/GameBoardCanvas';
+import GameBoardCanvas from '@components/GameBoardCanvas';
 
 function createRandomGeneration(width = 40, height = 40) {
   const generation = new Array(width);
