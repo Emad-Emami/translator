@@ -10,7 +10,10 @@ function GameBoardCanvas({
   className,
 }) {
   const [ctx, setCtx] = useState();
-  const getRefCallback = useCallback(el => setCtx(el.getContext('2d')), []);
+  const getRefCallback = useCallback(
+    el => el && setCtx(el.getContext('2d')),
+    [],
+  );
   useEffect(() => {
     if (ctx && data.length) {
       const ratio = width / data[0].length;
@@ -56,7 +59,7 @@ GameBoardCanvas.propTypes = {
   ).isRequired,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  style: PropTypes.shape({}),
+  style: PropTypes.object,
   className: PropTypes.string,
   radius: PropTypes.number,
 };

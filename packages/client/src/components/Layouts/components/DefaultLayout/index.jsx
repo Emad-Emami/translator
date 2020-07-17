@@ -1,7 +1,7 @@
 import React from 'react';
-import withStyles from '../../../../hocs/withStyles';
 import PropTypes from 'prop-types';
 import { Nav } from 'office-ui-fabric-react/lib/Nav';
+import withStyles from '../../../../hocs/withStyles';
 
 const styles = theme => {
   return {
@@ -22,34 +22,12 @@ const styles = theme => {
   };
 };
 
-function DefaultLayout({ children, classNames, history: { push }, ...rest }) {
-  const navLinkGroups = [
-    {
-      links: [
-        {
-          name: 'Home',
-          url: '/',
-          key: 'home',
-        },
-        {
-          name: 'Creatures',
-          url: '/creatures',
-          key: '/creatures',
-        },
-        {
-          name: 'Generations',
-          url: '/generations',
-          key: '/generations',
-        },
-        {
-          name: 'Genes',
-          url: '/genes',
-          key: '/genes',
-        },
-      ],
-    },
-  ];
-
+function DefaultLayout({
+  children,
+  navLinkGroups,
+  classNames,
+  history: { push },
+}) {
   function handleLinkClick(e, { key }) {
     e.preventDefault();
     push(key);
@@ -72,6 +50,9 @@ function DefaultLayout({ children, classNames, history: { push }, ...rest }) {
 
 DefaultLayout.propTypes = {
   children: PropTypes.node,
+  classNames: PropTypes.object,
+  history: PropTypes.object,
+  navLinkGroups: PropTypes.array,
 };
 
 export default withStyles(DefaultLayout, styles);

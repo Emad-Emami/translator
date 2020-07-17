@@ -15,16 +15,44 @@ export default function Application() {
   return (
     <Router>
       <Route path="/">
-        {props => (
-          <DefaultLayout {...props}>
-            <Switch>
-              <Route exact path="/" component={Games} />
-              <Route path="/creatures" component={Creatures} />
-              <Route path="/generations" component={Generations} />
-              <Route path="/genes" component={Genes} />
-            </Switch>
-          </DefaultLayout>
-        )}
+        {({ history }) => {
+          const navLinkGroups = [
+            {
+              links: [
+                {
+                  name: 'Home',
+                  url: '/',
+                  key: '/',
+                },
+                {
+                  name: 'Creatures',
+                  url: '/creatures',
+                  key: '/creatures',
+                },
+                {
+                  name: 'Generations',
+                  url: '/generations',
+                  key: '/generations',
+                },
+                {
+                  name: 'Genes',
+                  url: '/genes',
+                  key: '/genes',
+                },
+              ],
+            },
+          ];
+          return (
+            <DefaultLayout navLinkGroups={navLinkGroups} history={history}>
+              <Switch>
+                <Route exact path="/" component={Games} />
+                <Route path="/creatures" component={Creatures} />
+                <Route path="/generations" component={Generations} />
+                <Route path="/genes" component={Genes} />
+              </Switch>
+            </DefaultLayout>
+          );
+        }}
       </Route>
     </Router>
   );
